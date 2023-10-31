@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Client</title>
+  <script type="text/javascript">
+    const ws_py = new WebSocket('ws://localhost:9991');
+    const ws_node = new WebSocket('ws://localhost:9990');
+
+    // ws_py.onopen = function() {
+    //   console.log('Connected to server');
+    // };
+
+    // ws_py.onmessage = function(event) {
+    //   console.log('Received message: ' + event.data);
+    // };
+
+    function send() {
+      const message = document.getElementById('message').value;
+      ws_py.send(message);
+      ws_node.send(message);
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="message" placeholder="Type a message">
+  <button onclick="send()">Send</button>
+  <button onclick="loop">ooo</button>
+  <script src="./index.js"></script>
+</body>
+</html>
