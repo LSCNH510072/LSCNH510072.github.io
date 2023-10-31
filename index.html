@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山羊の前端小窝</title>
+    <link rel="shortcut icon" href="CNH510072.png" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_4307481_896ukanatf6.css?spm=a313x.manage_type_myprojects.i1.9.3e283a81l1X2ol&file=font_4307481_896ukanatf6.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="introduce">
+        <div class="shell">
+            <div class="photo">
+                <img src="CNH510072.png" alt="">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h3>Bbusiness card</h3>
+                    <h6>CNH510072&雷神</h6>
+                </div>
+                <div class="btn"><span></span></div>
+            </div>
+            <div class="box">
+                <i class="iconfont icon-QQ"></i>
+                <i class="iconfont icon-weixin"></i>
+                <i class="iconfont icon-github"></i>
+                <i class="iconfont icon-bilibili"></i>
+                <i class="iconfont icon-email"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- 引入JQ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+    // 当点击按钮（class为btn的元素）时执行以下代码
+    $('.btn').click(function () {
+        $(this).toggleClass('active');
+        $('.box').toggleClass('open');
+    });
+    // 冒泡排序
+</script>
+
+</html>
