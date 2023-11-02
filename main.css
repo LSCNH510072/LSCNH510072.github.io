@@ -10,5 +10,6 @@ body {
 }
 
 :root {
-  --unification-radius: 5%;
+  --unification-radius: 25px;
+  --unification-font-radius: 10px;
 }

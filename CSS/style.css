@@ -1,4 +1,4 @@
-.introduce {
+.PI {
   position: relative;
   display: flex;
   justify-content: center;
@@ -9,13 +9,22 @@
   margin: 3px;
   background: #222;
   border-radius: var(--unification-radius);
+  max-width: 340px;
 }
-
+.introduce {
+  position: absolute;
+  top: 120px;
+}
+.introduce p {
+  border: solid 2px #111;
+  padding: 5px;
+  border-radius: var(  --unification-font-radius);
+}
 .shell {
   width: 280px;
   height: 100px;
   position: relative;
-  left: 165px;
+  left: 48%;
   top: 60px;
   transform: translate(-50%, -50%);
   border-radius: 5px;
