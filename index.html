@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山羊の前端小窝</title>
+    <title>CNH510072的个人主页</title>
     <link rel="shortcut icon" href="CNH510072.png" type="image/x-icon">
-    <link rel="stylesheet"
-        href="https://at.alicdn.com/t/c/font_4307481_896ukanatf6.css?spm=a313x.manage_type_myprojects.i1.9.3e283a81l1X2ol&file=font_4307481_896ukanatf6.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4307481_kpv6s6au7no.css">
     <link rel="stylesheet" href="main.css">
+    <script src="jQuery/jQuery.js"></script>
 </head>
 
 <body>
@@ -16,12 +16,12 @@
     <div class="PI">
         <div class="shell">
             <div class="photo">
-                <img src="CNH510072.png" alt="">
+                <img width="90px" height="90px" src="https://pic.ziyuan.wang/2023/11/04/guest_5b6d8fa2a654c.png" alt="">
             </div>
             <div class="content">
                 <div class="text">
                     <h3>Bbusiness card</h3>
-                    <h6>CNH510072&雷神</h6>
+                    <p style="font-size: 15px">CNH510072&雷神</p>
                 </div>
                 <div class="btn"><span></span></div>
             </div>
@@ -35,19 +35,62 @@
         </div>
         <div class="introduce">
             <p>一个年轻的程序员</p>
+            <p>对UI界面要求极高，有时会尝试新鲜的东西，就会导致兼容性大大下降，不过新东西写起来挺爽的。</p>
+        </div>
+        <div class="function">
+            <div class="Simple">
+                <div class="location">
+                    <span class="iconfont icon-position"></span>
+                    <span>中国-广西-河池</span>
+                </div>
+                <div class="Time">
+                    <span class="iconfont icon-shijian"></span>
+                    <span id="Time"></span>
+                    <span>(UTC +08:00)</span>
+                </div>
+                <div class="email">
+                    <span class="iconfont icon-email"></span>
+                    <span id="span-1">a2444340295@outlook.com</span>
+                </div>
+                <div class="Friend">
+                    <span class="iconfont icon-pengyou"></span>
+                    <span id="follower"></span>
+                </div>
+
+                <!-- 菜单的英文 -->
+                <menu class="menu">
+                    <button>项目
+                        <span class="iconfont"></span>
+                        <div class="project">
+                            <span class="iconfont icon-xiangmu"></span>
+                            <span id="project">获取资源中</span>
+                        </div>
+                    </button>
+                    <div></div>
+                    <div></div>
+                </menu>
+            </div>
         </div>
     </div>
+    <div class="BS">
+        <div class="layer1"></div>
+        <div class="layer2"></div>
+        <div class="layer3"></div>
+    </div>
 
+    <div id="blog"></div>
+
+
+
+
+
+    <!-- 引入JQ -->
+<script src="mian.js"></script>
+<script>
+    searchHtmlFiles('ddd', '#blog')
+</script>
 </body>
 
-<!-- 引入JQ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script>
-    // 当点击按钮（class为btn的元素）时执行以下代码
-    $('.btn').click(function () {
-        $(this).toggleClass('active');
-        $('.box').toggleClass('open');
-    });
-</script>
+
 
 </html>

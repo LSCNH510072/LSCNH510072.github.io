@@ -1,0 +1,32 @@
+/*   --unification-radius: 25px;
+  --unification-font-radius: 10px;
+  --PI-unification-width: 350px;
+  --box-unification-translateY: 90px;
+  --box-translateX: -240px; 
+    --PI-menu-width: 334px;
+*/
+
+.menu button {
+    width: var(--PI-menu-width);
+    height: 40px;
+    border: none;
+    border-radius: 25px 25px 0px 0px;
+    background: #000;
+    color: #fff;
+    font-size: 1em;
+}
+
+.project {
+    position: relative;
+    top: 16px;
+    width: var(--PI-menu-width);
+    height: 0px;
+    background: #303030;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.button .project {
+    height: 150px;
+}

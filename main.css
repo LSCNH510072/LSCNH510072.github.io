@@ -1,15 +1,49 @@
-@import url(./CSS/style.css);
+@import url(./CSS/PI.css);
+/* @import url(./CSS/BS.css); */
+@import url(./CSS/MENU.css);
+
+:root {
+  --unification-div-radius: 10px;
+  --unification-background-color: #191919;
+  --unification-color: #fff;
+  --unification-radius: 25px;
+  --unification-font-radius: 10px;
+  --PI-unification-width: 350px;
+  --box-unification-translateY: 90px;
+  --box-translateX: -240px;
+  --PI-menu-width: 334px;
+}
+
 * {
   padding: 0;
   margin: 0;
+  color: var(--unification-color);
 }
 
 body {
   color: #fff;
-  background-color: #000;
+  background-color: #777;
+  display: inline-flex;
 }
 
-:root {
-  --unification-radius: 25px;
-  --unification-font-radius: 10px;
+#blog {
+  width: calc(100% - var(--PI-unification-width) - 20px);
+  position: absolute;
+  top: 5px;
+  display: inline;
+  right: 2px;
+  height: 99%;
+  background: var(--unification-background-color);
+  border-radius: var(--unification-radius);
+}
+
+#blog-content
+{
+  width: 95%;
+  flex: 1;
+  position: relative;
+  margin:10px auto 5px auto;
+  border-radius: var(--unification-div-radius);
+  background: #222;
+  height: 99px;
 }
