@@ -127,7 +127,7 @@ $(".menu button").click(function () {
 function searchHtmlFiles(folderPath, ids) {
   // 在指定路径下搜索文件夹找到HTML文件
   $.ajax({
-    url: `./${folderPath}`,
+    url: blog,
     success: function (data) {
       // 处理搜索到的HTML文件
       $(data)
