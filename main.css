@@ -4,9 +4,10 @@
 
 :root {
   --unification-div-radius: 10px;
-  --unification-background-color: #191919;
-  --unification-color: #fff;
-  --unification-radius: 25px;
+  --unification-background-color: #19191926;
+  --unification-background-div-color: #11111150;
+  --unification-font-color: #fff;
+  --unification-radius: 20px;
   --unification-font-radius: 10px;
   --PI-unification-width: 350px;
   --box-unification-translateY: 90px;
@@ -17,21 +18,22 @@
 * {
   padding: 0;
   margin: 0;
-  color: var(--unification-color);
+  color: var(--unification-font-color);
 }
 
 body {
-  color: #fff;
+  color: var(--unification-font-color);
   background-color: #777;
   display: inline-flex;
 }
 
 #blog {
+  padding: 1px;
   width: calc(100% - var(--PI-unification-width) - 20px);
   position: absolute;
   top: 5px;
   display: inline;
-  right: 2px;
+  right: 1px;
   height: 99%;
   background: var(--unification-background-color);
   border-radius: var(--unification-radius);
@@ -44,6 +46,7 @@ body {
   position: relative;
   margin:10px auto 5px auto;
   border-radius: var(--unification-div-radius);
-  background: #222;
-  height: 99px;
+  background: #11111150;
+  height: auto;
+  padding: 5px;
 }

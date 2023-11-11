@@ -1,9 +1,13 @@
-/*   --unification-radius: 25px;
+/*     --unification-div-radius: 10px;
+  --unification-background-color: rgba(25, 25, 25, 0.15);
+  --unification-background-div-color: #11111150;
+  --unification-font-color: #fff;
+  --unification-radius: 25px;
   --unification-font-radius: 10px;
   --PI-unification-width: 350px;
   --box-unification-translateY: 90px;
-  --box-translateX: -240px; 
-    --PI-menu-width: 334px;
+  --box-translateX: -240px;
+  --PI-menu-width: 334px;
 */
 
 .menu button {
@@ -11,9 +15,13 @@
     height: 40px;
     border: none;
     border-radius: 25px 25px 0px 0px;
-    background: #000;
+    background: var(--unification-background-div-color);
     color: #fff;
     font-size: 1em;
+}
+
+.menu button .iconfont.icon-xiala {
+    transform: rotate(90deg);
 }
 
 .project {

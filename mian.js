@@ -59,26 +59,36 @@ spanElement.addEventListener("click", function () {
 });
 
 // 使用jQuery获取GitHub上的项目数量和项目名称
+// 当页面加载完成后执行的函数
 $(document).ready(function () {
+  // 获取 id 为 project 的元素
   var project = $("#project");
+  // GitHub 的访问令牌
   var token = "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";
+  // 请求头部信息
   var headers = {
     Authorization: "token " + token,
     Accept: "application/vnd.github.v3+json",
   };
 
+  // GitHub API 的地址
   var url = "https://api.github.com/user/repos";
+  // 发送 AJAX 请求
   $.ajax({
     url: url,
     headers: headers,
     dataType: "json",
     success: function (response) {
+      // 获取项目数量
       var project_count = response.length;
+      // 获取项目名称
       var project_names = response.map(function (repo) {
         return repo.name;
       });
 
-      rojectsContent = project_names.join("<br>");
+      // 设置 projectsContent 变量为项目名称的连接字符串
+      var projectsContent = project_names.join("<br>");
+      // 设置 project 元素的 HTML 内容
       project.html(
         `项目数量：
             ${project_count}
@@ -89,21 +99,29 @@ $(document).ready(function () {
             </span>`
       );
 
+      // 设置 .project-names 元素的 word-break 属性为 break-all
       $(".project-names").css("word-break", "break-all");
 
+      // 打印 "请求成功" 到控制台
       console.log("请求成功");
     },
     error: function () {
+      // 设置 project 元素的 HTML 内容为 "无法访问GitHub"
       project.html("无法访问GitHub");
+      // 打印 "出现问题" 到控制台
       console.log("出现问题");
     },
+    // 设置请求超时时间为 10000 毫秒
     timeout: 10000,
   });
 });
 
+// 当点击 .menu 下的 button 元素时执行的函数
 $(".menu button").click(function () {
+  // 切换按钮的状态
   $(".menu button").toggleClass("button");
 });
+
 
 // 定义函数
 function searchHtmlFiles(folderPath, ids) {
@@ -138,7 +156,6 @@ function generateDivWithHtmlContent(htmlFilePath, targetElementId) {
     $targetElement.after($newDiv);
 
     // 将新的 div 元素插入到目标元素里
-    $newDiv.classname  = "div-class";
     $(targetElementId).append($newDiv);
   });
 }

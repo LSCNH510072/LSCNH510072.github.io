@@ -18,7 +18,7 @@
         border-radius: 50%;
         left: 0;
         top: 0;
-        box-shadow: getShadows(1000);
+        box-shadow: getShadows(300);
         animation: moveUp $duration linear infinite;
         &::after {
             content: '';
