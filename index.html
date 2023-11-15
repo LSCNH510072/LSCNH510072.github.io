@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNH510072的个人主页</title>
     <link rel="shortcut icon" href="CNH510072.png" type="image/x-icon">
-    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4307481_7bmlu5oqdse.css">
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4307481_6f45iuv4s6.css"> -->
     <link rel="stylesheet" href="main.css">
     <script src="./JS/jQuery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
@@ -79,7 +79,22 @@
         <div class="layer3"></div>
     </div>
 
-    <div id="blog"></div>
+    <div id="blog">
+        <div class="blog-cover">
+            <h1>测试文档</h1>
+            <label>
+                <span>阅读全文</span>
+                <input type="checkbox" hidden>
+                <div class="blog-content">
+                    <header>
+                        <span class="iconfont icon-guanbi" style="margin-left: auto;"></span>
+                    </header>
+                    <h1>CNH510072的个人主页</h1>
+                    <p>23-11-13</p>
+                </div>
+            </label>
+        </div>
+    </div>
 
 
 
@@ -88,7 +103,7 @@
     <!-- 引入JQ -->
     <script src="mian.js"></script>
     <script>
-        searchHtmlFiles('blog', '#blog')
+        searchBlogFiles('blog', '#blog', 1);
     </script>
 </body>
 
