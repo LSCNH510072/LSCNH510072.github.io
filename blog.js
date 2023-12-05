@@ -12,6 +12,7 @@ function searchBlogFiles(folderPath, ids, folderNumber, remotelocalhost, url) {
         var $newCover_title = res.title;
         var $newCover_img = res.img;
         var $newCover_introduce = res.introduce;
+        let $newCover = `
           <h1>${$newCover_title}</h1>
           <img src="${$newCover_img}" alt="${alt}"/>
           <p>${$newCover_introduce}</p>
