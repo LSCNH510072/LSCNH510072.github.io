@@ -1,5 +1,3 @@
-$unification-transition: 0.5s;
-
 #blog {
     overflow-x: hidden;
     stroke-width: 0px;
@@ -17,12 +15,12 @@ $unification-transition: 0.5s;
     max-height: 100px;
     text-overflow: initial;
     overflow: hidden;
-    transition: $unification-transition;
+    transition: all 0.5s;
     header {
         display: flex;
         width: 0%;
         background: #555;
-        transition: $unification-transition;
+        transition: all 0.5s;
         .iconfont {
             font-size: 0em;
         }

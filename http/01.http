@@ -1,0 +1,14 @@
+GET 127.0.0.1:5500 
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Connection: keep-alive
+Host: 127.0.0.1:5500
+If-Modified-Since: Fri, 17 Nov 2023 15:58:56 GMT
+If-None-Match: W/"127d-18bde01b618"
+Referer: http://127.0.0.1:5500/index.html
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/10 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/10
+sec-ch-ua: "Not A;Brand";v="85", "Chromium";v="110", "Google Chrome";v="110"

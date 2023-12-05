@@ -8,12 +8,21 @@
     <link rel="shortcut icon" href="CNH510072.png" type="image/x-icon">
     <!-- <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4307481_6f45iuv4s6.css"> -->
     <link rel="stylesheet" href="main.css">
-    <script src="./JS/jQuery.js"></script>
+    <!-- <script src="./JS/jQuery.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+    <script src="Customize.js"></script>
 
 </head>
 
 <body>
+    <script>
+        // 检测浏览器内核信息
+        var userAgent = window.navigator.userAgent.toLowerCase();
+
+        if (userAgent.indexOf("gecko/117") === -1 || userAgent.indexOf("chromium/118") === -1 || userAgent.indexOf("applewebkit/14") === -1) {
+            Customize_alert("您的浏览器内核不达到本站标准，请更换浏览器");
+        }
+    </script>
 
     <div class="PI">
         <div class="shell">
@@ -60,7 +69,7 @@
                 </div>
 
                 <menu class="menu">
-                    <button>项目
+                    <button style="hover{background-color: aquamarine;}">项目
                         <span class="iconfont icon-xiala"></span>
                         <div class="project">
                             <span class="iconfont icon-xiangmu"></span>
@@ -101,9 +110,12 @@
 
 
     <!-- 引入JQ -->
-    <script src="mian.js"></script>
+    <script src="main.js"></script>
+    <script src="blog.js"></script>
     <script>
-        searchBlogFiles('blog', '#blog', 1);
+
+
+        searchBlogFiles('blog', '#blog', 1, 'remote', '');
     </script>
 </body>
 

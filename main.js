@@ -1,3 +1,5 @@
+import "jquery"
+
 let alt = "我是图片";
 
 // 当点击按钮（class为btn的元素）时执行以下代码
@@ -124,58 +126,3 @@ $(document).ready(function () {
     timeout: 10000,
   });
 });
-
-function searchBlogFiles(folderPath, ids, folderNumber) {
-  $.ajax({
-    url: `//leishen.weborg.top/${folderPath}/${("0" + folderNumber)}/index.html`,
-    success: function () {
-      var htmlFilePath = `//leishen.weborg.top/${folderPath}/${("0" + folderNumber)}/index.html`;
-      var jsonFilePath = `//leishen.weborg.top/${folderPath}/${("0" + folderNumber)}/disposition.json`;
-      // 继续递归搜索下一个子文件夹
-      generateBlogContent(jsonFilePath, htmlFilePath, ids, folderNumber);
-      searchBlogFiles(folderPath, ids, folderNumber + 1);
-    },
-  });
-}
-
-// 生成div并插入HTML内容
-function generateBlogContent(
-  jsonFilePath,
-  htmlFilePath,
-  targetElementId,
-  hanshu
-) {
-  var $targetElement = $(targetElementId);
-  $.get(jsonFilePath, function (res) {
-    var $newCover_title = res.title;
-    var $newCover_img = res.img;
-    var $newCover_introduce = res.introduce;
-    let $newCover = `
-        <h1>${$newCover_title}</h1>
-        <img src="${$newCover_img}" alt="${alt}"/>
-        <p>${$newCover_introduce}</p>
-        <label>
-          <span>阅读全文</span>
-          <input type="checkbox" hidden>
-        </label>
-      `;
-    var $Cover_content = $(`<div class="blog-cover" id='${hanshu}'>`).html(
-      $newCover
-    );
-    $targetElement.after($Cover_content);
-    $(targetElementId).append($Cover_content);
-  });
-
-  $.get(htmlFilePath, function (data) {
-    // 获取id为xxx的元素
-    console.log(targetElementId);
-
-    // 创建一个新的div元素
-    var $newDiv = $(`<div class='blog-content'>`).html(
-      `<header><span class="iconfont icon-guanbi" style="margin-left: auto;"></span></header>${data}`
-    );
-
-    // 将新的 div 元素插入到目标元素里
-    $(`#${hanshu} label`).append($newDiv);
-  });
-}
